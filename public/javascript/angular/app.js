@@ -58,17 +58,17 @@ var app = angular.module('tabrenderer', []);
 }(angular.module("tabrenderer")));
 
 var UploadController = function ($scope, fileReader) {
-    $scope.getFile = function () {
-        $scope.progress = 0;
-        fileReader.readAsText($scope.file, $scope)
-                      .then(function(result) {
-                          $scope.tabularInput = result;
-                      });
-    };
- 
-    $scope.$on("fileProgress", function(e, progress) {
-        $scope.progress = progress.loaded / progress.total;
-    });
+  $scope.getFile = function () {
+    $scope.progress = 0;
+    fileReader.readAsText($scope.file, $scope)
+                  .then(function(result) {
+                      $scope.tabularInput = result;
+                  });
+  };
+
+  $scope.$on("fileProgress", function(e, progress) {
+    $scope.progress = progress.loaded / progress.total;
+  });
 };
 
 app.directive("ngFileSelect",function() {
