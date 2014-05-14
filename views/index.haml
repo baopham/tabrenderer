@@ -13,7 +13,10 @@
           %input{:type => "radio", :name => "delimiter",
               :value => ",", :checked => @delimiter==","} Comma
     .form-group
-      %input{:type => "file", "ng-file-select" => "onFileSelect($files)"}
+      %input.pull-left{:type => "file", "ng-file-select" => "onFileSelect($files)"}
+      %progress.pull-right{"ng-show" => "progress", :value => "{{progress}}"}
+      .clearfix
+      %p.help-block Upload your file and preview its content below. But don't upload anything larger than 700KB, it's going to kill your brwowser
     .form-group
       %textarea#tabular-textarea{:rows => "18", :name => "tabular-input", 
         "ng-model" => "tabularInput", "ng-init" => "tabularInput='#{@tabular_input}'"}
