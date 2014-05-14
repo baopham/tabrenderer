@@ -20,6 +20,12 @@
     .form-group
       %textarea#tabular-textarea{:rows => "18", :name => "tabular-input", 
         "ng-model" => "tabularInput", "ng-init" => "tabularInput='#{@tabular_input}'"}
+      :javascript
+        $(document).ready(function() {
+          $("#tabular-textarea").linedtextarea(
+            #{@error_line ? "{selectedLine : #{@error_line}}" : ""}
+          );
+        });
     %button.btn.btn-primary#submit-form-btn Render
 
 .col-md-12

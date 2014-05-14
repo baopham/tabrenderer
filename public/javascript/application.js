@@ -18,15 +18,3 @@ $(document).delegate('textarea', 'keydown', function(e) {
     $(this).get(0).selectionEnd = start + 1;
   }
 });
-
-$(function() {
-
-  // Target all classed with ".lined"
-  $(".lined").linedtextarea(
-    {selectedLine: 1}
-  );
-
-  // Target a single one
-  $("#tabular-textarea").linedtextarea();
-
-});

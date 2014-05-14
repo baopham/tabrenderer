@@ -6,6 +6,7 @@ end
 
 get '/' do
   @title = app_title
+  @page = 'index'
   haml :index
 end
 
@@ -23,10 +24,18 @@ post '/tabular/render' do
     rescue Exception => e
       e.message
     end
+
+  if @render_result.respond_to?(:match) and matches = @render_result.match(/line (\d+)/)
+    @error_line = matches[1]
+  end
+
+  @page = 'index'
+
   haml :index
 end
 
 get '/privacy' do
   @title = "Privacy | #{app_title}"
+  @page = 'privacy'
   haml :privacy
 end

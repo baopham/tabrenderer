@@ -8,13 +8,19 @@
     %link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=Arvo:400,700"}
     %link{:rel => "stylesheet", :href => "/stylesheets/application.css"}
 
-    %link{:rel => "stylesheet", :href => "/javascript/jquery-linedtextarea/jquery-linedtextarea.css"}
-    %script{:type => "text/javascript",
-        :src  => "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
-    %script{:type => "text/javascript",
-        :src  => "/javascript/jquery-linedtextarea/jquery-linedtextarea.js"}
-    %script{:type => "text/javascript",
-        :src  => "/javascript/application.js"}
+    - if @page == 'index'
+      %script{:type => "text/javascript",
+          :src => "//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"}
+      %script{:type => "text/javascript",
+          :src => "/javascript/angular/app.js"}
+
+      %link{:rel => "stylesheet", :href => "/javascript/jquery-linedtextarea/jquery-linedtextarea.css"}
+      %script{:type => "text/javascript",
+          :src  => "//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+      %script{:type => "text/javascript",
+          :src  => "/javascript/jquery-linedtextarea/jquery-linedtextarea.js"}
+      %script{:type => "text/javascript",
+          :src  => "/javascript/application.js"}
   %body
     .navbar.navbar-default.navbar-static-top{:role => "navigation"}
       .container-fluid
@@ -35,10 +41,6 @@
           &dash;
           %a{:href => "/privacy"} Privacy
 
-    %script{:type => "text/javascript",
-        :src => "//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"}
-    %script{:type => "text/javascript",
-        :src => "/javascript/angular/app.js"}
     :javascript
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
