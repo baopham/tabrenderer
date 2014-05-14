@@ -1,6 +1,6 @@
 .col-md-12{"ng-controller" => "UploadController"}
-  .page-header 
-    %h2 Render tabular data as table
+  %h3 Render tabular data as table
+  %hr
 
   %form{:role => "form", :action => "/tabular/render", :method => "post"}
     .form-group
@@ -15,7 +15,7 @@
     .form-group
       %input{:type => "file", "ng-file-select" => "onFileSelect($files)"}
     .form-group
-      %textarea#tabular-textarea{:rows => "15", :name => "tabular-input", "ng-model" => "tabularInput", "ng-init" => "tabularInput='#{@tabular_input}'"}
+      %textarea#tabular-textarea{:rows => "18", :name => "tabular-input", "ng-model" => "tabularInput", "ng-init" => "tabularInput='#{@tabular_input}'"}
     %button.btn.btn-primary#submit-form-btn Render
 
 .col-md-12

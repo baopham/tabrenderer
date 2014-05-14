@@ -1,9 +1,11 @@
+app_title = 'TabRenderer'
+
 before do
   headers "Content-Type" => "text/html; charset=utf-8"
 end
 
 get '/' do
-  @title = 'Tabular Renderer'
+  @title = app_title
   haml :index
 end
 
@@ -25,6 +27,6 @@ post '/tabular/render' do
 end
 
 get '/privacy' do
-  @title = 'Privacy | Tabular Renderer'
+  @title = "Privacy | #{app_title}"
   haml :privacy
 end

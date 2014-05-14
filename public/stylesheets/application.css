@@ -6,6 +6,7 @@ html {
 }
 
 body {
+  font-family: 'Arvo', serif;
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
@@ -26,4 +27,8 @@ body {
 textarea {
   height: 100%;
   width: 100%;
+}
+
+.navbar-brand {
+  font-size: 30px;
 }
