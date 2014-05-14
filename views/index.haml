@@ -19,18 +19,19 @@
     %button.btn.btn-primary#submit-form-btn Render
 
 .col-md-12
-  %hr
-  .well
-    - if @render_result.respond_to?('each')
-      %table.table.table-bordered
-        - if @render_result.count > 1
-          %tr
-            - @render_result.delete_at(0).each do |header|
-              %th= header
-        - @render_result.each do |row|
-          - if row
+  - if @render_result
+    %hr
+    .well
+      - if @render_result.respond_to?('each')
+        %table.table.table-bordered
+          - if @render_result.count > 1
             %tr
-              - row.each do |column|
-                %td= column
-    - else
-      = @render_result
+              - @render_result.delete_at(0).each do |header|
+                %th= header
+          - @render_result.each do |row|
+            - if row
+              %tr
+                - row.each do |column|
+                  %td= column
+      - else
+        = @render_result
