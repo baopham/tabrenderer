@@ -1,0 +1,29 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+#footer .text-muted {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 100%;
+  width: 100%;
+}
