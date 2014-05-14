@@ -15,7 +15,8 @@
     .form-group
       %input{:type => "file", "ng-file-select" => "onFileSelect($files)"}
     .form-group
-      %textarea#tabular-textarea{:rows => "18", :name => "tabular-input", "ng-model" => "tabularInput", "ng-init" => "tabularInput='#{@tabular_input}'"}
+      %textarea#tabular-textarea{:rows => "18", :name => "tabular-input", 
+        "ng-model" => "tabularInput", "ng-init" => "tabularInput='#{@tabular_input}'"}
     %button.btn.btn-primary#submit-form-btn Render
 
 .col-md-12
