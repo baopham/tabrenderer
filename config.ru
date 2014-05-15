@@ -4,8 +4,8 @@ require 'sinatra'
 require 'haml'
 require './tabular_renderer'
 
-set :environment, :development
+set :environment, :production
 set :run, false
-set :raise_errors, true
+set :raise_errors, false
 
 run Sinatra::Application
