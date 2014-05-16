@@ -37,11 +37,11 @@
           - if @render_result.count > 1
             %tr
               - @render_result.delete_at(0).each do |header|
-                %th= header
+                %th&= header
           - @render_result.each do |row|
             - if row
               %tr
                 - row.each do |column|
-                  %td= column
+                  %td&= column
       - else
         = @render_result
