@@ -32,3 +32,8 @@ textarea {
 .navbar-brand {
   font-size: 30px;
 }
+
+table {
+  table-layout: fixed;
+  word-wrap: break-word;
+}
