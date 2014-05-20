@@ -28,7 +28,7 @@
         });
     %button.btn.btn-primary#submit-form-btn Render
 
-.col-md-12
+.col-md-12#render-result
   - if @render_result
     %hr
     - if @render_result.respond_to?('each')
@@ -45,3 +45,9 @@
     - else
       .alert.alert-danger
         = @render_result
+  :javascript
+    $(document).ready(function() {
+      $(window.opera ? 'html' : 'html, body').animate({
+        scrollTop: $('#render-result').offset().top
+      }, 1000);
+    });
