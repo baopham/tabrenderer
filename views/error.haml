@@ -3,7 +3,8 @@
   %hr
   %p.text-danger
     Sorry there was a nasty error - 
-    = @error
-    \.
-    %a{:href => "http://github.com/baopham/"} Let me know
-    , I'll fix it right away.
+    = succeed '. ' do
+      = @error
+    = succeed ', ' do
+      %a{:href => "http://github.com/baopham/"} Let me know
+    I'll fix it right away.
