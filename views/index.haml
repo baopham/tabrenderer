@@ -12,6 +12,10 @@
         %label
           %input{:type => "radio", :name => "delimiter",
               :value => ",", :checked => @delimiter==","} Comma
+      .radio-inline
+        %label
+          %input{:type => "radio", :name => "delimiter",
+              :value => "|", :checked => @delimiter=="|"} Pipe
     .form-group
       %input.pull-left{:type => "file", "ng-file-select" => "onFileSelect($files)"}
       %progress.pull-right{"ng-show" => "progress", :value => "{{progress}}"}
